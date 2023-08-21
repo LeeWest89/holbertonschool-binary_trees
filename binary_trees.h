@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
+#include <stdbool.h>
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -48,5 +49,9 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 void binary_tree_print(const binary_tree_t *tree);
 int is_full_of_something(const binary_tree_t *tree);
+const binary_tree_t *leaf_check(const binary_tree_t *tree);
+size_t depth_check(const binary_tree_t *tree);
+const binary_tree_t *leaf(const binary_tree_t *tree);
+int perfect_r(const binary_tree_t *tree, size_t depth, size_t level);
 
 #endif
